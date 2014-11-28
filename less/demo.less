@@ -1,0 +1,22 @@
+@import "wlc.less";
+
+#wlc-demo {
+  &-image-2x {
+    background-image: url("../images/200_200_pixels.png");
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    @media @wlc-image-2x {
+      background-image: url("../images/400_400_pixels.png");
+      background-size: 200px 200px;
+    }
+  }
+  &-align-vertical {
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+    p {
+      .wlc-align-vertical();
+    }
+  }
+}
