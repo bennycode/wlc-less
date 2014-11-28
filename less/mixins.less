@@ -1,5 +1,12 @@
 @import "../lib/lesshat-prefixed.less";
 
+@wlc-image-2x: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 2)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)",
+~"only screen and (min-resolution: 2dppx)",
+~"only screen and (min-resolution: 192dpi)";
+
 .wlc-align-vertical() {
   .lh-translateY(-50%);
   position: relative;
@@ -7,17 +14,10 @@
 }
 
 .wlc-text-truncate(@width: 100%) {
-  text-overflow: ellipsis;
   display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
   vertical-align: top;
   white-space: nowrap;
-  overflow: hidden;
   width: @width;
 }
-
-@wlc-image-2x: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
-~"only screen and (min--moz-device-pixel-ratio: 2)",
-~"only screen and (-o-min-device-pixel-ratio: 3/2)",
-~"only screen and (min-device-pixel-ratio: 1.5)",
-~"only screen and (min-resolution: 2dppx)",
-~"only screen and (min-resolution: 192dpi)";
